@@ -73,10 +73,10 @@ JIRA の story point のフィールドがカスタムフィールドになっ�
 フィールドの ID は API で取得して、「環境設定」の項の通りに環境変数として設定する必要がある
 
 ```bash
-# 例
+# 例（your-domain, アカウントは適宜変更）
 curl --request GET \
-  --url 'https://your-domain.atlassian.net/rest/api/3/field' \
-  --user 'email@example.com:<api_token>' \
+  --url 'https://<your-domain>.atlassian.net/rest/api/3/field' \
+  --user '<email@example.com>:<api_token>' \
   --header 'Accept: application/json'
 
 # 大量に返ってくるので jq などでクエリした方が良い
