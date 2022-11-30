@@ -80,7 +80,8 @@ curl --request GET \
   --header 'Accept: application/json'
 
 # 大量に返ってくるので jq などでクエリした方が良い
-cat res.json | cat tmp.json| jq '.[] | select(.name == "Story point estimate")'
+# レスポンスを res.json に保存した場合
+cat res.json | jq '.[] | select(.name == "Story point estimate")'
 ```
 
 ## todos
